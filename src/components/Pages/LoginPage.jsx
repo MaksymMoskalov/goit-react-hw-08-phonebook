@@ -20,19 +20,32 @@ const LoginPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label>
-        <span>Email:</span>
-        <input {...register('email', { required: true })} type="email" />
+    <form onSubmit={handleSubmit(onSubmit)} className="login-form">
+      <div className="form__group field">
+        <input
+          {...register('email', { required: true })}
+          type="email"
+          className="form__field"
+          placeholder="Email"
+        />
+        <label className="form__label">Email</label>
         {errors.email && <span>This field is required</span>}
-      </label>
-      <label>
-        <span>Password:</span>
-        <input {...register('password', { required: true })} type="password" />
-        {errors.password && <span>This field is required</span>}
-      </label>
+      </div>
 
-      <button type="submit">Sign In</button>
+      <div className="form__group field">
+        <input
+          {...register('password', { required: true })}
+          type="password"
+          className="form__field"
+          placeholder="Password"
+        />
+        <label className="form__label">Password</label>
+        {errors.password && <span>This field is required</span>}
+      </div>
+
+      <button type="submit" className="login-btn">
+        Sign In
+      </button>
     </form>
   );
 };

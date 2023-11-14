@@ -18,24 +18,43 @@ const RegisterPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label>
-        <span>Name:</span>
-        <input {...register('name', { required: true })} type="text" />
+    <form onSubmit={handleSubmit(onSubmit)} className="login-form">
+      <div className="form__group field">
+        <input
+          {...register('name', { required: true })}
+          type="text"
+          className="form__field"
+          placeholder="Name"
+        />
+        <label className="form__label">Name</label>
         {errors.name && <span>This field is required</span>}
-      </label>
-      <label>
-        <span>Email:</span>
-        <input {...register('email', { required: true })} type="email" />
-        {errors.email && <span>This field is required</span>}
-      </label>
-      <label>
-        <span>Password:</span>
-        <input {...register('password', { required: true })} type="password" />
-        {errors.password && <span>This field is required</span>}
-      </label>
+      </div>
 
-      <button type="submit">Sign Up</button>
+      <div className="form__group field">
+        <input
+          {...register('email', { required: true })}
+          type="email"
+          className="form__field"
+          placeholder="Email"
+        />
+        <label className="form__label">Email</label>
+        {errors.email && <span>This field is required</span>}
+      </div>
+
+      <div className="form__group field">
+        <input
+          {...register('password', { required: true })}
+          type="password"
+          className="form__field"
+          placeholder="Password"
+        />
+        <label className="form__label">Password</label>
+        {errors.password && <span>This field is required</span>}
+      </div>
+
+      <button type="submit" className="login-btn">
+        Sign Up
+      </button>
     </form>
   );
 };

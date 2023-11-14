@@ -61,8 +61,8 @@ const ContactsPage = () => {
   const afterFiltration = filteredContacts();
 
   return (
-    <div>
-      <h1>Phonebook</h1>
+    <div className="contacts-container">
+      <h1 className="phone-title">Phonebook</h1>
       <ContactForm addContact={addContacts} />
       {error && window.alert(error)}
       {isLoading && (
