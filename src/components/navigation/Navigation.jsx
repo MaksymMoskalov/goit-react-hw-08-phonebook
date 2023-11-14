@@ -5,18 +5,19 @@ import { selectAuthAuthenticated } from 'redux/authorization.selectors';
 
 const Navigation = () => {
   const authenticated = useSelector(selectAuthAuthenticated);
+
   return (
     <header className="header">
       <nav>
-        <NavLink to={'/'} className="header-link">
-          Home
-        </NavLink>
         {authenticated ? (
           <>
+            {' '}
             <NavLink to={'/contacts'} className="header-link">
               Contacts
             </NavLink>
-            <button>Log Out</button>
+            <NavLink to={'/'} className="header-link">
+              User
+            </NavLink>
           </>
         ) : (
           <>
