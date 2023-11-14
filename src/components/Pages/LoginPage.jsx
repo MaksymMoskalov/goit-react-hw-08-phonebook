@@ -29,18 +29,24 @@ const LoginPage = () => {
           placeholder="Email"
         />
         <label className="form__label">Email</label>
-        {errors.email && <span>This field is required</span>}
+        {errors.email && (
+          <span className="error-message">This field is required</span>
+        )}
       </div>
 
       <div className="form__group field">
         <input
-          {...register('password', { required: true })}
+          {...register('password', { required: true, minLength: 7 })}
           type="password"
           className="form__field"
           placeholder="Password"
         />
         <label className="form__label">Password</label>
-        {errors.password && <span>This field is required</span>}
+        {errors.password && (
+          <span className="error-message">
+            Password must contain at least 7 characters
+          </span>
+        )}
       </div>
 
       <button type="submit" className="login-btn">

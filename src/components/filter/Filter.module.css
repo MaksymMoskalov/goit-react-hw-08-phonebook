@@ -4,4 +4,22 @@ body {
 
 .input_names {
   display: block;
+  color: #9b9b9b;
+}
+
+.add_input {
+  border-radius: 8px;
+  height: 25px;
+  margin-bottom: 25px;
+  background-color: #222222;
+  border: 2px solid #9b9b9b;
+  color: #9b9b9b;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.add_input:focus-visible,
+.add_input:hover {
+  outline: none;
+  border: 2px solid #11998e;
 }

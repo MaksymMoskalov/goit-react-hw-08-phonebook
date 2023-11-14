@@ -135,6 +135,7 @@ export const StyledContainer = styled.div`
   }
   .acsent {
     color: #11998e;
+    font-weight: 500;
   }
 
   .contacts-container {
@@ -149,5 +150,56 @@ export const StyledContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
     color: #11998e;
+  }
+  .contacts-group {
+    display: flex;
+  }
+  .right-group {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 370px;
+    border: 2px solid #9b9b9b;
+    border-radius: 15px;
+    color: #9b9b9b;
+  }
+
+  .contacts-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .contacts-title {
+    color: #38ef7d;
+  }
+
+  .contact-item {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .remove-contact-btn {
+    margin-left: auto;
+    border: 1px solid #9b9b9b;
+    border-radius: 15px;
+    background-color: #222222;
+    color: #9b9b9b;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      background-color: red;
+      border: 1px solid #fff;
+      color: #fff;
+    }
+  }
+  .phone-num {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  .error-message {
+    display: block;
+    margin-top: 10px;
+    color: red;
   }
 `;

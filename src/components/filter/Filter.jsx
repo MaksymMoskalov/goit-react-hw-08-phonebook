@@ -4,7 +4,12 @@ export const Filter = ({ value, onChange }) => {
   return (
     <label htmlFor="filter">
       <span className={css.input_names}>Find contacts by name</span>
-      <input type="text" value={value} onChange={onChange} />
+      <input
+        type="text"
+        value={value}
+        onChange={onChange}
+        className={css.add_input}
+      />
     </label>
   );
 };

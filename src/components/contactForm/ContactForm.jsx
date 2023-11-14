@@ -35,6 +35,7 @@ export function ContactForm({ addContact }) {
 
   return (
     <form onSubmit={onSubmit} className={css.contact_form}>
+      <p className={css.form_title}>Add Contact</p>
       <label htmlFor="name">
         <span className={css.input_names}> Name</span>
         <input
@@ -44,6 +45,7 @@ export function ContactForm({ addContact }) {
           required
           value={name}
           onChange={onInputChange}
+          className={css.add_input}
         />
       </label>
       <label htmlFor="number">
@@ -55,10 +57,11 @@ export function ContactForm({ addContact }) {
           required
           value={number}
           onChange={onInputChange}
+          className={css.add_input}
         />
       </label>
       <button type="submit" className={css.add_btn}>
-        Add contact
+        Add
       </button>
     </form>
   );
