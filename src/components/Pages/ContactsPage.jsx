@@ -66,18 +66,17 @@ const ContactsPage = () => {
       <div className="contacts-group">
         <ContactForm addContact={addContacts} />
         {error && window.alert(error)}
-        {isLoading && (
-          <Blocks
-            visible={true}
-            height="80"
-            width="80"
-            ariaLabel="blocks-loading"
-          />
-        )}
-
         <div className="right-group">
           <h2 className="contacts-title">Contacts</h2>
           <Filter value={filter} onChange={Filtration} />
+          {isLoading && (
+            <Blocks
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="blocks-loading"
+            />
+          )}
           <ContactList contacts={afterFiltration} onDelit={delitContacts} />
         </div>
       </div>
