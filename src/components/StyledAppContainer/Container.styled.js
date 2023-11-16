@@ -128,6 +128,10 @@ export const StyledContainer = styled.div`
     margin-right: auto;
     color: #9b9b9b;
     font-size: 1.3rem;
+
+    @media (max-width: 768px) {
+      max-width: 250px;
+    }
   }
   .icon {
     display: block;
@@ -144,6 +148,10 @@ export const StyledContainer = styled.div`
     width: 700px;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 768px) {
+      max-width: 300px;
+      align-items: center;
+    }
   }
   .phone-title {
     display: inline-flex;
@@ -153,6 +161,10 @@ export const StyledContainer = styled.div`
   }
   .contacts-group {
     display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      max-width: 400px;
+    }
   }
   .right-group {
     margin-left: 50px;
@@ -164,6 +176,11 @@ export const StyledContainer = styled.div`
     border: 2px solid #9b9b9b;
     border-radius: 15px;
     color: #9b9b9b;
+    @media (max-width: 768px) {
+      margin: 0;
+      max-width: 250px;
+      margin-top: 25px;
+    }
   }
 
   .contacts-list {
