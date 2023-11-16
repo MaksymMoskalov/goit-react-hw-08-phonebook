@@ -35,6 +35,9 @@ export const StyledContainer = styled.div`
     margin-top: 10px;
     width: 50%;
     margin-bottom: 25px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   .form__field {
